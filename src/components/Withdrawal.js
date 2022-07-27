@@ -20,9 +20,15 @@ const Withdrawal = () => {
 	const onSubmit = (e) => {
 		e.preventDefault()
 
-    if (amount <= 0) {
-      return alert('Amount cannot be zero or lessthan zero')
+    if (amount < 200) {
+      return alert(
+				'Withdrawal unsuccessful! Minimum withdrawal is GMD200'
+			)
 		}
+
+		 if (amount > 2000) {
+				return alert('Withdrawal unsuccessful! Maximum withdrawal is GMD2000')
+			}
 		
 		if ( foundAccount?.balance - amount <= 300 ) {
 			return alert(
@@ -44,8 +50,7 @@ const Withdrawal = () => {
 			type: 'withdarwal'
 		}
 
-    dispatch(withdrawAccount(withdrawalData))
-		// console.log( 'depositeData', withdrawalData, 'acc', foundAccount )
+    dispatch(withdrawAccount(withdrawalData))		
 		dispatch( createTransaction( transactionData ) )
 		alert( `withdrawal Successful! Amount withdrawn: GMD${withdrawalData.amount}` )
 		setAmount('')

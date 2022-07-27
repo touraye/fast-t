@@ -13,8 +13,7 @@ const createAccount = async (acoountData) => {
 }
 
 const updateAccount = async (id, acoountData) => {
-  const response = await axios.put( `${baseUrl}/${id}`, acoountData )
-  console.log('response.data', response.data)
+  const response = await axios.put( `${baseUrl}/${id}`, acoountData )  
 	return response.data
 }
 

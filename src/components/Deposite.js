@@ -26,8 +26,14 @@ const Deposite = () => {
   const onSubmit = ( e ) => {
     e.preventDefault()
 		
-		if ( amount < 300 ) {
-			return alert(`Deposite unsuccessful! deposite should be atleast GMD300 or more`)
+		if ( amount < 200 ) {
+			return alert(`Deposite unsuccessful! Minimum deposite is GMD200`)
+		}
+
+		if (amount > 2000) {
+			return alert(
+				`Deposite unsuccessful! Maximum deposite is GMD2000`
+			)
 		}
 		
 		const depositeData = {

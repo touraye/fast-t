@@ -29,8 +29,12 @@ const Transfer = () => {
 			return alert('Invalid credentails')
 		}
 
-		if (amount <= 0) {
-			return alert('Amount cannot be zero or lessthan zero')
+		if (amount < 200) {
+			return alert('Transfer Unsuccessful! Minimum transfer is GMD200')
+		}
+
+		if (amount > 2000) {
+			return alert('Transfer Unsuccessful! Maximum transfer is GMD2000')
 		}
 
 		if (senderAccount?.balance - amount <= 300) {
@@ -61,7 +65,7 @@ const Transfer = () => {
 		dispatch(createTransaction(widthdrawTransaction))
 		dispatch( createTransaction( depositeTransaction ) )
 		alert(
-			`Transfer Successful! Amount transfered: GMD${depositeToRecipient.amount}Transfered to: ${recipientAccountName}`
+			`Transfer Successful! Amount transfered: GMD${depositeToRecipient.amount}     Transfered to: ${recipientAccountName}`
 		)
 		setRecipientAccountName( '' )
 		setRecipientAccountNumber( '' )

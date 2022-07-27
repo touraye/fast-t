@@ -46,8 +46,7 @@ export const createAccount = createAsyncThunk(
 //deposite
 export const depositeAccount = createAsyncThunk(
 	'account/deposite',
-	async (depositeData, thunkAPI) => {
-		console.log('deposite', depositeData)
+	async (depositeData, thunkAPI) => {		
 		try {
 			const updatedAccount = {
 				accountName: depositeData.accountName,

@@ -8,8 +8,7 @@ const getTransactions = async () => {
 }
 
 const createTransaction = async (transactionData) => {
-  const response = await axios.post( baseUrl, transactionData )
-  console.log('res', response.data);
+  const response = await axios.post( baseUrl, transactionData )  
 	return response.data
 }
 

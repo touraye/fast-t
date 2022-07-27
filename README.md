@@ -32,3 +32,50 @@ Banking is made very easy these days. People can send, receive and transfer mone
 
 **Transactions** users can have a history of their entire transaction including deposit, withdrawal and transfers
 
+
+
+### DB JSON
+
+```json
+{
+  "auth": [
+    {
+      "username": "lmanneh",
+      "password": "1234",
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "lamin manneh",
+      "username": "lmanneh",
+      "password": "1234"
+    },
+    {
+      "id": 2,
+      "name": "alieu saidy",
+      "username": "asaidy",
+      "password": "1234"
+    }
+  ],
+  "accounts": [
+    {
+      "accountName": "lamin manneh",
+      "accountNumber": "200-2334",
+      "balance": 0,
+      "interest": 0,
+      "id": 1
+    },
+    {
+      "accountName": "alieu saidy",
+      "accountNumber": "200-2344",
+      "balance": 0,
+      "interest": 0,
+      "id": 2
+    }
+  ],
+    "transactions": []
+  }
+```
+
