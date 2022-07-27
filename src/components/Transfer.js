@@ -8,9 +8,7 @@ const Transfer = () => {
 	const { accounts } = useSelector( ( state ) => state.account )
 	const { auth } = useSelector( ( state ) => state.auth )	
   const dispatch = useDispatch()
-  
-	const [senderAccountName, setSenderAccountName] = useState('')
-	const [senderAccountNumber, setSenderAccountNumber] = useState('')
+  	
 	const [recipientAccountName, setRecipientAccountName] = useState('')
 	const [recipientAccountNumber, setRecipientAccountNumber] = useState('')
 	const [amount, setAmount] = useState('')
@@ -23,10 +21,7 @@ const Transfer = () => {
 	
 	const onSubmit = (e) => {
 		e.preventDefault()
-
-		// const senderAccount = accounts?.find(
-		// 	(acc) => acc.accountNumber === senderAccountNumber
-		// )	
+		
 		const recipientAccount = accounts?.find(
 			(acc) => acc.accountNumber === recipientAccountNumber
 		)
@@ -64,11 +59,13 @@ const Transfer = () => {
 		dispatch(withdrawAccount(withdrawalFromSender)) //?withdrawing money from sender's acc
 		dispatch(depositeAccount(depositeToRecipient)) //*depositing into recipient acc
 		dispatch(createTransaction(widthdrawTransaction))
-		dispatch(createTransaction(depositeTransaction))
-		// console.log('withdrawing from', withdrawalFromSender , 'acc', senderAccount)
-		// console.log('deposite to:', depositeToRecipient, 'acc', recipientAccount)
-		// console.log('trans withdraw', widthdrawTransaction)
-		// console.log('trans deposite', depositeTransaction)
+		dispatch( createTransaction( depositeTransaction ) )
+		alert(
+			`Transfer Successful! Amount transfered: GMD${depositeToRecipient.amount}Transfered to: ${recipientAccountName}`
+		)
+		setRecipientAccountName( '' )
+		setRecipientAccountNumber( '' )
+		setAmount( '' )		
 	}
 	return (
 		<div>

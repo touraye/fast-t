@@ -6,24 +6,27 @@ import { getAccounts } from '../features/account/accountSlice'
 import { setAuth } from '../features/auth/authSlice'
 
 const Banking = () => {
-  const { accounts, isLoading, isError } = useSelector(
-		(state) => state.account
-	)
-	const { auth } = useSelector( ( state ) => state.auth )	
-  const dispatch = useDispatch()
+	const { auth, isLoading, isError } = useSelector((state) => state.auth)		
+	const dispatch = useDispatch()	
   
     useEffect(() => {
 			if (isError) {
 				console.log('Fetching account failed. Please try again!')
-			}		
-			dispatch( getAccounts() )
-			dispatch(setAuth())
-		}, [dispatch, isError, ])
+			}
+
+			dispatch(getAccounts())
+			dispatch( setAuth() )
+			if ( auth === null ) {
+				window.location.reload()				
+			}			
+		}, [dispatch, isError, auth])
+		
+		
 
 		if (isLoading) return <p>...laoding</p>
 
   return (
-		<div className='banking-content'>
+		<div className='banking-content'>			 			
 			<p className='page-title'>Welcome to your online banking service</p>
 			<div className='menu'>
 				<Link to='/deposite' className='menu-link'>

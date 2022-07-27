@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUsers } from '../features/user/userSlice'
-import { login, reset, setLogin } from '../features/auth/authSlice'
+import { reset, setLogin } from '../features/auth/authSlice'
 
 const Login = () => {
-	const { users, isLoading, isSuccess, isError, message } = useSelector( state => state.user )
+	const { users, isLoading, isError, message } = useSelector( state => state.user )
 	const { auth } = useSelector( state => state.auth )
 	const dispatch = useDispatch()
 	const navigate = useNavigate()

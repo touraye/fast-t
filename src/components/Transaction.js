@@ -1,13 +1,14 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { getAccounts } from '../features/account/accountSlice'
 import { getTransactions } from '../features/transaction/transactionSlice'
 
-const Transaction = () => {
-	const { accounts, isError, isLoading } = useSelector( ( state ) => state.account )	
+const Transaction = () => {	
 	const { auth } = useSelector( ( state ) => state.auth )	
-	const { transactions } = useSelector( ( state ) => state.transaction )
+	const { transactions, isError, isLoading } = useSelector(
+		(state) => state.transaction
+	)
 	
   const dispatch = useDispatch() 
   

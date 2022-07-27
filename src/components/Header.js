@@ -3,13 +3,12 @@ import {FaSignInAlt, FaSignOutAlt, FaUser} from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUsers } from '../features/user/userSlice'
-import { reset, setAuth , setLogin, onLogout } from '../features/auth/authSlice'
+import {setAuth , onLogout } from '../features/auth/authSlice'
 
 const Header = () => {
-  const { users, isLoading, isError, message } = useSelector(
-    ( state ) => state.user    
-  )
- const { auth } = useSelector((state) => state.auth)
+ const { auth, isLoading, isError, message } = useSelector(
+		(state) => state.auth
+ )
 	const dispatch = useDispatch()
   const navigate = useNavigate()  
   
@@ -22,8 +21,7 @@ const Header = () => {
   }, [ dispatch, navigate, isError, message ] )
   
   const logout = () => {    
-    dispatch(onLogout())    
-    // dispatch( reset() )    
+    dispatch(onLogout())          
     navigate('/login')
   }
 
@@ -35,9 +33,12 @@ const Header = () => {
 		<header className='header'>
 			<h1 className='logo'>Online Bnak</h1>
 			<div className='login-container'>
-				<button onClick={logout} className='btn btn-block login-btn'>
-				 <FaUser />	{auth ? <FaSignOutAlt /> : <FaSignInAlt />}
-				</button>
+				<a href='/login' onClick={logout} className='btn btn-block login-btn'>
+					<FaUser /> {auth ? <FaSignOutAlt /> : <FaSignInAlt />}
+				</a>
+				{/* <button onClick={logout} className='btn btn-block login-btn'>
+					<FaUser /> {auth ? <FaSignOutAlt /> : <FaSignInAlt />}
+				</button> */}
 				<p className='auth-user'>{auth ? auth.username : ''}</p>
 			</div>
 		</header>

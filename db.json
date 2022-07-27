@@ -24,14 +24,14 @@
     {
       "accountName": "lamin manneh",
       "accountNumber": "200-2334",
-      "balance": 1150,
+      "balance": 2600,
       "interest": 0,
       "id": 1
     },
     {
       "accountName": "alieu saidy",
       "accountNumber": "200-2344",
-      "balance": 9850,
+      "balance": 9800,
       "interest": 0,
       "id": 2
     }
@@ -146,6 +146,166 @@
       "amount": 500,
       "type": "deposite",
       "time": "2022-07-18T21:00:11.267Z"
+    },
+    {
+      "accountName": "lamin manneh",
+      "accountNumber": "200-2334",
+      "balance": 1150,
+      "interest": 0,
+      "id": "35388",
+      "amount": 300,
+      "type": "deposite",
+      "time": "2022-07-26T21:54:21.107Z"
+    },
+    {
+      "accountName": "lamin manneh",
+      "accountNumber": "200-2334",
+      "balance": 1450,
+      "interest": 0,
+      "id": "82622",
+      "amount": 350,
+      "type": "withdarwal",
+      "time": "2022-07-26T21:55:37.900Z"
+    },
+    {
+      "accountName": "lamin manneh",
+      "accountNumber": "200-2334",
+      "balance": 1100,
+      "interest": 0,
+      "id": "32775",
+      "amount": 400,
+      "type": "deposite",
+      "time": "2022-07-26T21:58:24.826Z"
+    },
+    {
+      "accountName": "lamin manneh",
+      "accountNumber": "200-2334",
+      "balance": 1500,
+      "interest": 0,
+      "id": "46569",
+      "amount": 400,
+      "type": "deposite",
+      "time": "2022-07-26T22:25:35.237Z"
+    },
+    {
+      "accountName": "lamin manneh",
+      "accountNumber": "200-2334",
+      "balance": 1900,
+      "interest": 0,
+      "id": "55568",
+      "amount": 400,
+      "type": "deposite",
+      "time": "2022-07-26T22:52:07.391Z"
+    },
+    {
+      "accountName": "lamin manneh",
+      "accountNumber": "200-2334",
+      "balance": 2300,
+      "interest": 0,
+      "id": "25852",
+      "amount": 300,
+      "type": "withdarwal",
+      "time": "2022-07-26T22:53:03.210Z"
+    },
+    {
+      "accountName": "lamin manneh",
+      "accountNumber": "200-2334",
+      "balance": 2000,
+      "interest": 0,
+      "id": "82966",
+      "amount": 300,
+      "type": "withdarwal",
+      "time": "2022-07-26T22:53:34.027Z"
+    },
+    {
+      "accountName": "lamin manneh",
+      "accountNumber": "200-2334",
+      "balance": 1700,
+      "interest": 0,
+      "id": "18938",
+      "amount": 500,
+      "type": "deposite",
+      "time": "2022-07-26T22:54:03.704Z"
+    },
+    {
+      "accountName": "lamin manneh",
+      "accountNumber": "200-2334",
+      "balance": 2200,
+      "interest": 0,
+      "id": "96912",
+      "amount": 400,
+      "type": "transfer",
+      "time": "2022-07-26T22:56:38.167Z"
+    },
+    {
+      "accountName": "alieu saidy",
+      "accountNumber": "200-2344",
+      "balance": 9850,
+      "interest": 0,
+      "id": "71812",
+      "amount": 400,
+      "type": "transfer",
+      "time": "2022-07-26T22:56:38.174Z"
+    },
+    {
+      "accountName": "alieu saidy",
+      "accountNumber": "200-2344",
+      "balance": 10250,
+      "interest": 0,
+      "id": "52624",
+      "amount": 300,
+      "type": "transfer",
+      "time": "2022-07-26T23:03:47.560Z"
+    },
+    {
+      "accountName": "lamin manneh",
+      "accountNumber": "200-2334",
+      "balance": 1800,
+      "interest": 0,
+      "id": "34188",
+      "amount": 300,
+      "type": "transfer",
+      "time": "2022-07-26T23:03:47.564Z"
+    },
+    {
+      "accountName": "alieu saidy",
+      "accountNumber": "200-2344",
+      "balance": 9550,
+      "interest": 0,
+      "id": "65315",
+      "amount": 700,
+      "type": "deposite",
+      "time": "2022-07-27T11:38:43.740Z"
+    },
+    {
+      "accountName": "alieu saidy",
+      "accountNumber": "200-2344",
+      "balance": 10250,
+      "interest": 0,
+      "id": "37475",
+      "amount": 450,
+      "type": "withdarwal",
+      "time": "2022-07-27T11:38:54.527Z"
+    },
+    {
+      "accountName": "lamin manneh",
+      "accountNumber": "200-2334",
+      "balance": 2500,
+      "interest": 0,
+      "id": "21790",
+      "amount": 500,
+      "type": "deposite",
+      "time": "2022-07-27T11:41:14.273Z"
+    },
+    {
+      "accountName": "lamin manneh",
+      "accountNumber": "200-2334",
+      "balance": 3000,
+      "interest": 0,
+      "id": "1354",
+      "amount": 400,
+      "type": "withdarwal",
+      "time": "2022-07-27T11:41:29.997Z"
     }
   ]
 }

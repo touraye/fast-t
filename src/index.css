@@ -10,6 +10,10 @@ body {
   background-color: rgb(209, 203, 203);
 }
 
+a {
+  text-decoration: none;
+}
+
 /* header */
 .header {
   background-color:rgb(25, 43, 63);
@@ -34,6 +38,7 @@ body {
   top: 170px;
   right: 40px;
   width: 80%;
+  z-index: 100;
   background-color:rgb(209, 203, 203);
   padding: 1rem;
   border-radius: 10px;

@@ -5,12 +5,9 @@ import { getAccounts, depositeAccount } from '../features/account/accountSlice'
 import { setNotifications } from '../features/notification/notificationSlice'
 import {createTransaction, getTransactions} from '../features/transaction/transactionSlice'
 
-import Notification from '../components/Notification'
-
 const Deposite = () => {
 	const { accounts } = useSelector( state => state.account )
 	const { auth } = useSelector( ( state ) => state.auth )	
-	const { notification } = useSelector( state => state )		
 	const dispatch = useDispatch()
    
   const [ amount, setAmount ] = useState( '' )
@@ -44,21 +41,20 @@ const Deposite = () => {
 			type: 'deposite'
 		}
 
-
-				// console.log( 'depositeData', depositeData, 'acc', foundAccount )
-				// console.log( 'cur account', accounts );
     dispatch(depositeAccount(depositeData))
 		dispatch( setNotifications( depositeData, 1000 ) )
-		dispatch(createTransaction(transactionData))
+		dispatch( createTransaction( transactionData ) )
+		alert(`Deposite Successful! Amount deposited: GMD${depositeData.amount}`)
+		setAmount('')
   }
 	
   return (
 		<div>
-      { showNotification && <Notification
+      {/* { showNotification && <Notification
         message={notification}
 				showNotification={showNotification}
 				setShowNotification={setShowNotification}
-			/>}
+			/>} */}
 			<div className='heading'>
 				<Link to='/' className='back-btn'>
 					&#8592;

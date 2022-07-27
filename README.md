@@ -1,46 +1,34 @@
-# Getting Started with Create React App and Redux
+# On-line Banking App Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+Banking is made very easy these days. People can send, receive and transfer money across the globe with the blink of an eye. This App is a little demo of an on-line banking application.
 
-## Available Scripts
+## Build With:
 
-In the project directory, you can run:
+* React(UI)
+* Redux toolkit(State Management)
+* Axios(fetching data)
+* json server(DB)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Deposit
+* Withdrawal
+* Transfer
+* Check account
+* Transaction history
+* Users
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Features in Details
 
-### `npm test`
+**Users** have login details which they can use to login to their account.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Deposit** users can make deposit(add money to their account) 
 
-### `npm run build`
+**Withdrawal** users can make withdrawals(take money) from their account.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Transaction** users can send money to other account holder by providing their account details
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Check Account** users can make enquirers to their account and get their current balance in their account
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Transactions** users can have a history of their entire transaction including deposit, withdrawal and transfers
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

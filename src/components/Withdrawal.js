@@ -46,7 +46,9 @@ const Withdrawal = () => {
 
     dispatch(withdrawAccount(withdrawalData))
 		// console.log( 'depositeData', withdrawalData, 'acc', foundAccount )
-		dispatch(createTransaction(transactionData))
+		dispatch( createTransaction( transactionData ) )
+		alert( `withdrawal Successful! Amount withdrawn: GMD${withdrawalData.amount}` )
+		setAmount('')
 	}
 	return (
 		<div>
