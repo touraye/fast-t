@@ -38,12 +38,7 @@ Banking is made very easy these days. People can send, receive and transfer mone
 
 ```json
 {
-  "auth": [
-    {
-      "username": "lmanneh",
-      "password": "1234",
-      "id": 1
-    }
+  "auth": [    
   ],
   "users": [
     {
