@@ -14,7 +14,7 @@ const Login = () => {
 	
 	useEffect( () => {
 		if ( auth === null ) {
-			navigate('/login')
+			navigate('/')
 		}
 		if ( isError ) {
 			console.log(message);
@@ -31,7 +31,7 @@ const Login = () => {
 		 const userCredentail = {
 				username,
 			 password,
-				user: foundUser.name
+				user: foundUser?.name
 			}
 		
 		if ( foundUser?.password !== password ) {
@@ -40,7 +40,7 @@ const Login = () => {
 
 		window.localStorage.setItem('authUser', JSON.stringify(userCredentail)) 
 		dispatch( setLogin( userCredentail ) )		
-		navigate( '/' )
+		navigate( '/home' )
 		
 		setUsername( '' )
 		setPassword( '' )

@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react'
 import {  FaBook, FaMoneyBillAlt, FaMoneyCheck, FaMoneyCheckAlt } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { getAccounts } from '../features/account/accountSlice'
 import { setAuth } from '../features/auth/authSlice'
 
 const Banking = () => {
 	const { auth, isLoading, isError } = useSelector((state) => state.auth)		
 	const dispatch = useDispatch()	
+	const navigate = useNavigate()
   
     useEffect(() => {
 			if (isError) {
@@ -15,11 +16,12 @@ const Banking = () => {
 			}
 
 			dispatch(getAccounts())
-			dispatch( setAuth() )
-			if ( auth === null ) {
-				window.location.reload()				
-			}			
-		}, [dispatch, isError, auth])
+			dispatch( setAuth() )		
+			
+			if (!auth) {
+				window.location.reload(false)
+			}
+		}, [dispatch, isError, auth, navigate])
 		
 		
 

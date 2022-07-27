@@ -16,13 +16,17 @@ const Header = () => {
     if (isError) {
       console.log(message)
     }   
+   
     dispatch( getUsers() )  
-    dispatch(setAuth())
-  }, [ dispatch, navigate, isError, message ] )
+    dispatch( setAuth() )
+    // if ( auth === null ) {
+    //   navigate('/login')
+    // }
+  }, [ dispatch, navigate, isError, message, auth ] )
   
   const logout = () => {    
     dispatch(onLogout())          
-    navigate('/login')
+    navigate('/')
   }
 
   if ( isLoading ) {
@@ -33,7 +37,7 @@ const Header = () => {
 		<header className='header'>
 			<h1 className='logo'>Online Bnak</h1>
 			<div className='login-container'>
-				<a href='/login' onClick={logout} className='btn btn-block login-btn'>
+				<a href='/' onClick={logout} className='btn btn-block login-btn'>
 					<FaUser /> {auth ? <FaSignOutAlt /> : <FaSignInAlt />}
 				</a>
 				{/* <button onClick={logout} className='btn btn-block login-btn'>

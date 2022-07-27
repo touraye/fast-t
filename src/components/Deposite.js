@@ -62,7 +62,7 @@ const Deposite = () => {
 				setShowNotification={setShowNotification}
 			/>} */}
 			<div className='heading'>
-				<Link to='/' className='back-btn'>
+				<Link to='/home' className='back-btn'>
 					&#8592;
 				</Link>
 			</div>
