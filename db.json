@@ -24,7 +24,7 @@
     {
       "accountName": "lamin manneh",
       "accountNumber": "200-2334",
-      "balance": 3342,
+      "balance": 3642,
       "interest": 0,
       "id": 1
     },
@@ -436,6 +436,16 @@
       "amount": 400,
       "type": "transfer",
       "time": "2022-07-27T12:24:41.207Z"
+    },
+    {
+      "accountName": "lamin manneh",
+      "accountNumber": "200-2334",
+      "balance": 3342,
+      "interest": 0,
+      "id": "95052",
+      "amount": 300,
+      "type": "deposite",
+      "time": "2022-07-27T12:47:09.681Z"
     }
   ]
 }
